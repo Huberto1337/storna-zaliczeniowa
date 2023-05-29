@@ -1,0 +1,46 @@
+*{
+    font-family:georgia;
+}
+#lewy{
+    background-color: maroon;
+    color:white;
+    height: 600px;
+    width: 30%;
+    float:left;
+}
+#prawy{
+    background-color: maroon;
+    color:white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    float:right;
+}
+footer{
+    background-color: dimgray;
+    color:white;
+    clear:both;
+}
+#prawy img{
+    float:left;
+    padding: 10px;
+    border:solid 1px white;
+}
+#prawy ul{
+    float:left;
+}
+#prawy p{
+    clear: both;
+}
+p{
+    padding: 10px;
+}
+#button1{
+    background-color: indigo;
+}
+#button2{
+background-color: steelblue;
+}
+#button3{
+    background-color: Olive;
+}

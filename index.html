@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styl6.css">
+        <title>Style w JavaScript</title>
+    </head>
+    <body>
+        <section id="lewy">
+            <h1>Konfigurator stylu</h1>
+            <p>Podaj kolor tła</p>
+            <input type="button" value="Indigo" id="button1" onclick="Indigo()">
+            <input type="button" value="SteelBlue" id="button2" onclick="SteelBlue()">
+            <input type="button" value="Olive" id="button3" onclick="Olive()">
+            <p>Podaj kolor czcionki</p>
+            <select id="lista" onchange="zmiana()">
+                <option value="white">white</option>
+                <option value="tan">tan</option>
+                <option value="Bisque">bisque</option>
+                <option value="plum">plum</option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach, np.200%</p>
+            <input id="rozmiar1" value="100%" onchange="rozmiar()">
+            <p>Czy rysunek ma mieć ramke?</p>
+            <input type="checkbox" id="ramka" onchange="Border()" checked>Rysuj ramke?
+            <p>Jaki jest typ punktora listy</p>
+            <input type="radio" name="radio" checked id="radio1" onchange="punktor()">Dysk
+            <input type="radio" name="radio" id="radio2" onchange="punktor()">kwadrat
+            <input type="radio" name="radio" id="radio3" onchange="punktor()">okrąg
+        </section>
+        <section id="prawy">
+            <img src="gibraltar.jpg" alt="półwysep Gilbraltar" id="obraz">
+            <ul id="Id_lista">
+                <li>element 1</li>
+                <li>element 2</li>
+                <li>element 3</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </section>
+        <footer>Autor:Hubert Wręga</footer>
+    </body>
+    <script>
+        const Indigo=()=>{
+            prawy.style.background="Indigo"
+        }
+        const SteelBlue=()=>{
+            prawy.style.background="SteelBlue"
+        }
+        const Olive=()=>{
+            prawy.style.background="olive"
+        }
+        const zmiana=()=>{
+            prawy.style.color=lista.value;
+        }
+        const rozmiar=()=>{
+            prawy.style.fontSize=rozmiar1.value;
+        }
+        const Border=()=>{
+            if(ramka.checked){
+                obraz.style.border="1px white solid";
+            }
+            else{
+                obraz.style.border="none";
+            }
+        }
+        const punktor=()=>{
+            if(radio1.checked){
+                Id_lista.style.listStyleType="disc";
+            }
+            if(radio2.checked){
+                Id_lista.style.listStyleType="square";
+            }
+            if(radio3.checked){
+                Id_lista.style.listStyleType="circle";
+            }
+
+        }
+    </script>
+</html>
